@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<!--
+
+ Copyright © 2022 Code by Hcat
+ 
+ Font：WenQuanYi (Spring of Letters)
+ Font: Unifont http://www.unifont.org/
+ 对于中国开发者的声明：
+
+中国承认开源作品的著作权。著作权法第2条规定，外国人、无国籍人的作品根据其作者所属国或者经常居住地国同中国签订的协议或者共同参加的国际条约享有的著作权，受本法保护。
+中国加入了伯尔尼公约和TRIPS协议，其中TRIPS第10条规定明确规定，计算机程序作为文学作品受伯尔尼公约保护。
+2020年修订的《实施国际著作权条约的规定》对保护期等作了具体规定。
+GPL v3许可证不存在违反中国法律和行政法规的情况，符合合同法规定的要约、承诺订立方式，一般认为属于合同。
+ 虽然GPL v3的官方正式版本为英文，但这不影响其合同效力。中国法律未强制性要求书面合同必须以中文写就。
+ 修改软件和传送修改后的软件是GPL v3许可证自动向下游使用者授予的核心权利，如果修改版是二进制格式，需必须提供源代码，详见GPL v3第5条和第6条。
+
+1.如果您不接受 GPL/LGPL 许可证，请勿使用任何遵循该许可证条款发布的软件。如果您在自己的产品中使用了 GPL/LGPL 软件，则说明您已经接受了 GPL/LGPL 许可证中定义的所有条款，并有义务向产品的最终用户提供源代码——无论该源代码是否经过您的修改。如果经过了您自己的修改，则必须公开“衍生作品”的源代码，并以相同的许可证条款发布。
+2．当您从 GPL/LGPL 软件中拿出 10 行以上的源代码用于自己的作品中时，则您的作品将成为该 GPL/LGPL 软件的衍生作品，无论您的作品的整体代码规模有多大。因此，如果您不打算将自己的作品作为自由软件发布，则应该远离自由软件代码，以免因为受到自由软件代码的影响而编写出和这些软件相类似的代码。
+3．如果在您的作品中使用了 GPL/LGPL 软 件，但没有对这些软件做任何修改，则可以在产品手册或者其他类似的文档中、程序界面上或者帮助信息中指明您使用的自由软件名称、版权拥有者以及能够获取该 自由软件全部源代码的公共网站或第三方。如果因为某种原因，最终用户无法从您提到的第三方或者公共网站上获得该自由软件的源代码，您应该担负提供源代码的 责任和义务。
+4．GPL/LGPL 条款赋予您修改作品的权利，经修改之后的作品称为“衍生作品”。当您的衍生作品以某种方式发布时（典型情况就是用于您的产品中），您必须依照 GPL/LGPL 许可证发布您的衍生作品。当然，一种更加可取的办法是，将自己所做的修改提交给原始作品的维护者，并由该维护者负责发布，而您在产品中始终使用由维护者发布的作品。
+5．自由软件不等于免费。提供自由软件的人可以要求您支付一定的费用，该费用通常有两层含义：第一，自由软件以某种介质发行时，该介质的制作、发布等费用；第 二，当您希望获得对某自由软件的技术支持、缺陷修正等服务，要求某个人或组织提供相应的产品质量担保时，该组织或个人可以要求您就质量担保收取服务费用， 甚至是专有软件产品惯用的使用许可费用。这里提到的组织或个人是任何遵循上述自由软件许可证条款发布自由软件、并向您提供质量担保的组织或个人，并不限于 自由软件作品的作者或主要的版权拥有人。
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>ColorMOTD - Hcat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="favicon.ico" mce_href="favicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="favicon.ico" mce_href="favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="favicon.ico" mce_href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script src="js/init.js"></script>
+    <script src="js/sonic.js"></script>
+    <script src="js/loadingAnimation.js"></script>
+    <script src="js/pageControl.js"></script>
+    <script src="js/elementAnimation.js"></script>
+</head>
+
+<body bgcolor="#1F1F1F" ondrag="return!1" ondragstart="return!1" style="height:100%;overflow-y:hidden">
+    <div id="bg" style="display:none">
+        <div id="loading" class="center loading">
+            <script>
+                var loadingAnim = playLoadingAnim(document.getElementById("loading"));
+            </script>
+        </div>
+        <div id="main" style="display:none">
+            <div id="logo" class="center" style="display:none"><img id="splash" src="images/splash.png"
+                    style="position:absolute;right:-60px;top:30px;width:210px;height:134px"></div>
+            <div id="buttons" class="center" style="display:none">
+                <div class="button"
+                    onclick="window.open('http://vcheck.windit.net/mc_plugin/andylizi/colormotd/files/ColorMOTD.jar')">
+                    开始</div>
+                <p>
+                    <div class="button" onclick="next()">Introduction</div>
+                    <p>
+                        <div class="button" onclick="showChangelog()">更新日志</div>
+                        <p>
+                            <div class="button" onclick="exit()">退出</div>
+            </div>
+        </div>
+		<!-- <a class="go-next" style="height:5em;display:none" title="Next">Next</a> -->
+    </div>
+    <div id="changelog" style="display:none;height:100%" class="center">
+        <div id="changelogLoading" class="center loading"></div>
+        <div id="changelogView" style="display:none"></div><a class="go-pervious" style="height:5em;display:none"
+            title="Pervious">Pervious</a>
+    </div>
+    <div id="introduction" style="display:none;height:100%">
+        <div id="frameLoading" class="center loading"></div><iframe id="mcbbsFrame" width="100%" height="100%"
+            frameborder="0" style="display:none"></iframe>
+    </div>
+    <div id="dynamicJSContainer" style="display:none"></div><img id="TASLogo" src="images/Hcat.png"
+        style="display:none;position:absolute;bottom:1%;right:1%;clip:rect(auto auto auto auto)">
+</body>
+
+</html>

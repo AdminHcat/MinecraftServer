@@ -1,0 +1,212 @@
+@font-face {
+    font-weight: 400;
+    font-style: normal;
+    font-family: mojang;
+    src: url(../fonts/mojangbitmap.eot);
+    src: url(../fonts/mojangbitmap-iefix.eot?) format('embedded-opentype'), url(../fonts/mojangbitmap.woff2) format('woff2'), url(../fonts/unifont.woff) format('woff'), url(../fonts/font.ttf) format('truetype'), url(../fonts/mojangbitmap.svg) format('svg')
+}
+
+body {
+    overflow-x: hidden;
+    color: #fff;
+    font-family: "Microsoft Yahei", Simsun;
+}
+
+body,
+html {
+    height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none
+}
+
+hr {
+    height: 1px;
+    border: 0;
+    background-color: gray;
+    background-image: -webkit-linear-gradient(left, #505050, #333, #1f1f1f);
+    background-image: -o-linear-gradient(left, #505050, #333, #1f1f1f)
+}
+
+a {
+    text-decoration: none
+}
+
+.center {
+    clear: both;
+    margin: 0 auto;
+    vertical-align: middle
+}
+
+#main,
+.center {
+    text-align: center
+}
+
+#main {
+    padding-top: 90px
+}
+
+#logo,
+#main {
+    position: relative
+}
+
+#logo {
+    width: 58pc;
+    height: 129px;
+    background-image: url(../images/Logo.png);
+    background-size: cover
+}
+
+#buttons {
+    padding-top: 75pt
+}
+
+.button {
+    clear: both;
+    margin: 0 auto;
+    width: 500px;
+    height: 47px;
+    border: #000 solid 2px;
+    background: url(../images/mc_button.png) no-repeat;
+    color: #fff;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 30px;
+    font-family: mojang;
+    line-height: 47px;
+    cursor: pointer
+}
+
+.button:hover {
+    background: url(../images/mc_button_hover.png) no-repeat
+}
+
+.button:before {
+    height: 10px
+}
+
+#changelogView {
+    overflow: auto;
+    margin: 0 auto;
+    padding: 50px 2em;
+    width: 50pc;
+    text-align: left;
+    font-style: bold;
+    cursor: default
+}
+
+#changelogView .content:hover {
+    color: orange
+}
+
+#changelogView .add:before {
+    color: #02e200;
+    content: '+ ';
+    font-weight: 700;
+    font-family: monospace
+}
+
+#changelogView .remove:before {
+    color: red;
+    content: '- ';
+    font-weight: 700;
+    font-family: monospace
+}
+
+#changelogView .change:before {
+    color: #06ffea;
+    content: '* ';
+    font-weight: 700;
+    font-family: monospace
+}
+
+#changelogView .header {
+    color: #34e69e;
+    font-weight: 700
+}
+
+.go-next {
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+    margin: 0 0 0 -5em;
+    width: 10em;
+    border: 0;
+    text-indent: 10em;
+    white-space: nowrap;
+    cursor: pointer
+}
+
+.go-next,
+.go-next:before {
+    position: absolute;
+    left: 50%;
+    display: block
+}
+
+.go-next:before {
+    top: 50%;
+    margin: -.75em 0 0 -1em;
+    width: 2em;
+    height: 1.5em;
+    background-image: url(../images/arrow.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: ''
+}
+
+.go-pervious {
+    top: 0;
+    overflow: hidden;
+    margin: 0 0 0 -5em;
+    width: 10em;
+    border: 0;
+    text-indent: 10em;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg)
+}
+
+.go-pervious,
+.go-pervious:before {
+    position: absolute;
+    left: 50%;
+    display: block
+}
+
+.go-pervious:before {
+    bottom: 50%;
+    z-index: 1;
+    margin: -.75em 0 0 -1em;
+    width: 2em;
+    height: 1.5em;
+    background-image: url(../images/arrow.svg);
+    background-position: center center;
+    background-size: contain;
+    content: ''
+}
+
+#bg,
+.go-pervious:before {
+    background-repeat: no-repeat
+}
+
+#bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/backgroud.png);
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 75px rgba(0, 0, 0, .75);
+    filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size: cover
+}
+
+.loading {
+    padding-top: 50px
+}

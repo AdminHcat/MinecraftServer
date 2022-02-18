@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ColorMOTD</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="./css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link href="http://vcheck.windit.net/mc_plugin/andylizi/colormotd/website/favicon.ico" mce_href="favicon.ico"
+        rel="bookmark" type="image/x-icon">
+    <link href="http://vcheck.windit.net/mc_plugin/andylizi/colormotd/website/favicon.ico" mce_href="favicon.ico"
+        rel="icon" type="image/x-icon">
+    <link href="http://vcheck.windit.net/mc_plugin/andylizi/colormotd/website/favicon.ico" mce_href="favicon.ico"
+        rel="shortcut icon" type="image/x-icon">
+    <script src="./js/init.js"></script>
+    <div id="dynamicJSContainer">
+        <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+    </div>
+    <script src="./js/sonic.js"></script>
+    <script src="./js/loadingAnimation.js"></script>
+    <script src="./js/pageControl.js"></script>
+    <script src="./js/elementAnimation.js"></script>
+    <style type="text/css">
+        @font-face {
+            font-family: "element-icons";
+            src: url('chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.woff') format('woff'),
+                url('chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.ttf ') format('truetype');
+            /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+        }
+    </style>
+</head>
+
+<body bgcolor="#1F1F1F" ondrag="return!1" ondragstart="return!1" style="height: 100%; overflow-y: hidden; zoom: 1;">
+    <div id="bg" style="">
+        <div id="main" style="display: block;">
+            <div id="logo" class="center" style=""><img id="splash" src="./ColorMOTD - andylizi_files/splash.png"
+                    style="position: absolute; right: -64px; top: 26px; width: 218px; height: 142px;"></div>
+            <div id="buttons" class="center" style="">
+                <div class="button"
+                    onclick="window.open(&quot;http://vcheck.windit.net/mc_plugin/andylizi/colormotd/files/ColorMOTD.jar&quot;,&quot;_top&quot;,&quot;Download ColorMOTD&quot;)">
+                    Download</div>
+                <p></p>
+                <div class="button" onclick="next()">Plugin Introduction</div>
+                <p></p>
+                <div class="button" onclick="showChangelog()">ChangeLog</div>
+                <p></p>
+                <div class="button" onclick="exit()">Exit</div>
+            </div>
+        </div><a class="go-next" style="height: 57px;" title="Next">Next</a>
+    </div>
+    <div id="changelog" style="display:none;height:100%" class="center">
+        <div id="changelogLoading" class="center loading"></div>
+        <div id="changelogView" style="display:none"></div><a class="go-pervious" style="height: 57px; display: none;"
+            title="Pervious">Pervious</a>
+    </div>
+    <div id="introduction" style="display:none;height:100%">
+        <div id="frameLoading" class="center loading"></div><iframe id="mcbbsFrame" width="100%" height="100%"
+            frameborder="0" style="display:none" src="./ColorMOTD - andylizi_files/saved_resource.html"></iframe>
+    </div>
+    <div id="dynamicJSContainer" style="display:none"></div><img id="TASLogo" src="./images/TAS.png"
+        style="position: absolute; bottom: 1%; right: 1%; clip: rect(auto, auto, auto, auto);">
+    <div class="yformater-layer">
+        <div class="yformater-layer-content"><i class="yformater-layer-icon"></i></div>
+    </div>
+</body>
+
+</html>

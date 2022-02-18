@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<!--
+
+ Copyright (C) 2016 andylizi
+
+
+
+ This program is free software: you can redistribute it and/or modify
+
+ it under the terms of the GNU General Public License as published by
+
+ the Free Software Foundation, either version 3 of the License, or
+
+ (at your option) any later version.
+
+
+
+ This program is distributed in the hope that it will be useful,
+
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+
+ GNU General Public License for more details.
+
+
+
+ You should have received a copy of the GNU General Public License
+
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>ColorMOTD - andylizi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="favicon.ico" mce_href="favicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="favicon.ico" mce_href="favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="favicon.ico" mce_href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script src="js/init.js"></script>
+    <script src="js/sonic.js"></script>
+    <script src="js/loadingAnimation.js"></script>
+    <script src="js/pageControl.js"></script>
+    <script src="js/elementAnimation.js"></script>
+</head>
+
+<body bgcolor="#1F1F1F" ondrag="return!1" ondragstart="return!1" style="height:100%;overflow-y:hidden">
+    <div id="bg" style="display:none">
+        <div id="loading" class="center loading">
+            <script>
+                var loadingAnim = playLoadingAnim(document.getElementById("loading"));
+            </script>
+        </div>
+        <div id="main" style="display:none">
+            <div id="logo" class="center" style="display:none"><img id="splash" src="images/splash.png"
+                    style="position:absolute;right:-60px;top:30px;width:210px;height:134px"></div>
+            <div id="buttons" class="center" style="display:none">
+                <div class="button"
+                    onclick="window.open(&quot;http://vcheck.windit.net/mc_plugin/andylizi/colormotd/files/ColorMOTD.jar&quot;,&quot;_top&quot;,&quot;Download ColorMOTD&quot;)">
+                    Download</div>
+                <p>
+                    <div class="button" onclick="next()">Plugin Introduction</div>
+                    <p>
+                        <div class="button" onclick="showChangelog()">ChangeLog</div>
+                        <p>
+                            <div class="button" onclick="exit()">Exit</div>
+            </div>
+        </div><a class="go-next" style="height:5em;display:none" title="Next">Next</a>
+    </div>
+    <div id="changelog" style="display:none;height:100%" class="center">
+        <div id="changelogLoading" class="center loading"></div>
+        <div id="changelogView" style="display:none"></div><a class="go-pervious" style="height:5em;display:none"
+            title="Pervious">Pervious</a>
+    </div>
+    <div id="introduction" style="display:none;height:100%">
+        <div id="frameLoading" class="center loading"></div><iframe id="mcbbsFrame" width="100%" height="100%"
+            frameborder="0" style="display:none"></iframe>
+    </div>
+    <div id="dynamicJSContainer" style="display:none"></div><img id="TASLogo" src="images/TAS.png"
+        style="display:none;position:absolute;bottom:1%;right:1%;clip:rect(auto auto auto auto)">
+</body>
+
+</html>
